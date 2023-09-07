@@ -80,7 +80,7 @@ public class Main {
 
         session = sessionFactory.getCurrentSession();
         session.beginTransaction();
-        Item item = session.get(Item.class,2);  // товары с айдишником 2 (печеньки) хранятся на 2-х складах
+        Item item = session.get(Item.class,2);  
         for (Warehouse i : item.getWarehouses()) {
             System.out.println(i.getNameWarehouse());
         }
